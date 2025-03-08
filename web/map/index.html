@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Technická</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <section class="navbar">
+        <a href="/index.html"><img src="/imgs/logo.png" alt="Logo" class="logo"></a>
+        <nav class="buttons">
+            <a href="/dashboard/index.html" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-house-user" style="color: #ffffff;"></i>
+                </span>
+                <div>Dashboard</div>
+            </a>
+            <a href="/map/index.html" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i>
+                </span>
+                <div>Mapa</div>
+            </a>
+        </nav>
+    </section>
+    <section class="main">
+        <div class="menu">
+            <h2>Filtry</h2>
+            <h3>Kraje</h3>
+            <select name="kraj" id="kraj">
+                <option value="null"></option>
+                <option value="Hlavní město Praha">Hlavní město Praha</option>
+                <option value="Středočeský kraj">Středočeský kraj</option>
+                <option value="Jihočeský kraj">Jihočeský kraj</option>
+                <option value="Plzeňský kraj">Plzeňský kraj</option>
+                <option value="Karlovarský kraj">Karlovarský kraj</option>
+                <option value="Ústecký kraj">Ústecký kraj</option>
+                <option value="Liberecký kraj">Liberecký kraj</option>
+                <option value="Královéhradecký kraj">Královéhradecký kraj</option>
+                <option value="Pardubický kraj">Pardubický kraj</option>
+                <option value="Vysočina">Kraj Vysočina</option>
+                <option value="Jihomoravský kraj">Jihomoravský kraj</option>
+                <option value="Zlínský kraj">Zlínský kraj</option>
+                <option value="Olomoucký kraj">Olomoucký kraj</option>
+                <option value="Moravskoslezský kraj">Moravskoslezský kraj</option>
+            </select>
+            <h3>Okresy</h3>
+            <select name="okres" id="okres">
+                <option value="null"></option>
+                <option value="Benešov">Benešov</option>
+                <option value="Beroun">Beroun</option>
+                <option value="Blansko">Blansko</option>
+                <option value="Brno-město">Brno město</option>
+                <option value="Brno-venkov">Brno venkov</option>
+                <option value="Bruntál">Bruntál</option>
+                <option value="Břeclav">Břeclav</option>
+                <option value="Česká Lípa">Česká Lípa</option>
+                <option value="České Budějovice">České Budějovice</option>
+                <option value="Český Krumlov">Český Krumlov</option>
+                <option value="Děčín">Děčín</option>
+                <option value="Domažlice">Domažlice</option>
+                <option value="Frýdek-Místek">Frýdek Místek</option>
+                <option value="Havlíčkův Brod">Havlíčkův Brod</option>
+                <option value="Hodonín">Hodonín</option>
+                <option value="Hradec Králové">Hradec Králové</option>
+                <option value="Cheb">Cheb</option>
+                <option value="Chomutov">Chomutov</option>
+                <option value="Chrudim">Chrudim</option>
+                <option value="Jablonec nad Nisou">Jablonec nad Nisou</option>
+                <option value="Jeseník">Jeseník</option>
+                <option value="Jičín">Jičín</option>
+                <option value="Jihlava">Jihlava</option>
+                <option value="Jindřichův Hradec">Jindřichův Hradec</option>
+                <option value="Karlovy Vary">Karlovy Vary</option>
+                <option value="Karviná">Karviná</option>
+                <option value="Kladno">Kladno</option>
+                <option value="Klatovy">Klatovy</option>
+                <option value="Kolín">Kolín</option>
+                <option value="Kroměříž">Kroměříž</option>
+                <option value="Kutná Hora">Kutná Hora</option>
+                <option value="Liberec">Liberec</option>
+                <option value="Litoměřice">Litoměřice</option>
+                <option value="Louny">Louny</option>
+                <option value="Mělník">Mělník</option>
+                <option value="Mladá Boleslav">Mladá Boleslav</option>
+                <option value="Most">Most</option>
+                <option value="Náchod">Náchod</option>
+                <option value="Nový Jičín">Nový Jičín</option>
+                <option value="Nymburk">Nymburk</option>
+                <option value="Olomouc">Olomouc</option>
+                <option value="Opava">Opava</option>
+                <option value="Ostrava-město">Ostrava město</option>
+                <option value="Pardubice">Pardubice</option>
+                <option value="Pelhřimov">Pelhřimov</option>
+                <option value="Písek">Písek</option>
+                <option value="Plzeň-jih">Plzeň jih</option>
+                <option value="Plzeň-město">Plzeň město</option>
+                <option value="Plzeň-sever">Plzeň sever</option>
+                <option value="Hlavní město Praha">Praha</option>
+                <option value="Praha-východ">Praha východ</option>
+                <option value="Praha-západ">Praha západ</option>
+                <option value="Prachatice">Prachatice</option>
+                <option value="Prostějov">Prostějov</option>
+                <option value="Přerov">Přerov</option>
+                <option value="Příbram">Příbram</option>
+                <option value="Rakovník">Rakovník</option>
+                <option value="Rokycany">Rokycany</option>
+                <option value="Rychnov nad Kněžnou">Rychnov nad Kněžnou</option>
+                <option value="Semily">Semily</option>
+                <option value="Sokolov">Sokolov</option>
+                <option value="Strakonice">Strakonice</option>
+                <option value="Svitavy">Svitavy</option>
+                <option value="Šumperk">Šumperk</option>
+                <option value="Tachov">Tachov</option>
+                <option value="Tábor">Tábor</option>
+                <option value="Teplice">Teplice</option>
+                <option value="Trutnov">Trutnov</option>
+                <option value="Třebíč">Třebíč</option>
+                <option value="Uherské Hradiště">Uherské Hradiště</option>
+                <option value="Ústí nad Labem">Ústí nad Labem</option>
+                <option value="Ústí nad Orlicí">Ústí nad Orlicí</option>
+                <option value="Vsetín">Vsetín</option>
+                <option value="Vyškov">Vyškov</option>
+                <option value="Zlín">Zlín</option>
+                <option value="Znojmo">Znojmo</option>
+                <option value="Žďár nad Sázavou">Žďár nad Sázavou</option>
+            </select>
+            <button class="menuButton" onclick="search()">Najít<i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </div>
+        <div class="center">
+            <h1>Mapa STK stanic</h1>
+            <div id="map"></div>
+            <div class="copyrights">Všechny použité obrázky a data jsou ve volném užití, nejsou chráněny autorskými právy nebo jsou použity v souladu s jejich licencí.</div>
+        </div>
+        <div class="bg2"></div>
+    </section>
+    <script src="map.js"></script>
+</body>
+</html>

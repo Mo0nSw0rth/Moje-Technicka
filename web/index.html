@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Technická</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="navbar">
+        <a href="/index.html"><img src="/imgs/logo.png" alt="Logo" class="logo"></a>
+        <nav class="buttons">
+            <a href="" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-house-user" style="color: #ffffff;"></i>
+                </span>
+                <div>Dashboard</div>
+            </a>
+            <a href="" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i>
+                </span>
+                <div>Mapa</div>
+            </a>
+        </nav>
+    </section>
+    <section class="main">
+        <div class="bg1"></div>
+        <div class="center">
+            <div class="mainSection">
+                <h1>Moje Technická, parťák pro vaše auto</h1>
+                <h2>Nestarejte se o STK, my všechno pohlídáme za vás</h2>
+                <div class="vinSearch">
+                    <input class="vinInput" type="text" placeholder="Zadejte VIN vašeho vozu..." name="" required>
+                    <button class="vinButton" onclick="redirect('/showcase/?vin=' + vinInput.value)">HLEDAT<i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                </div>
+            </div>
+            <div class="threeBoxes">
+                <div class="FAQBox">
+                    <h2>
+                        Co je VIN a jak ho zjistím ?
+                    </h2>
+                    <h3>
+                        VIN je jedinečný kód vozidla, který najdete na štítku v motorovém prostoru, na sloupku dveří nebo v technickém průkazu.
+                    </h3>
+                </div>
+                <div class="FAQBox">
+                    <h2>
+                        Jaké data využíváme ?
+                    </h2>
+                    <h3>
+                        Využíváme okolo 6 000 datových sad, ze kterých bereme STK a ostatní informace. Data jsou veřejné na portálu <a href="https://data.gov.cz" target="_blank">data.gov.cz</a>
+                    </h3>
+                </div>
+                <div class="FAQBox">
+                    <h2>
+                        Kontakty
+                    </h2>
+                    <h3>
+                        krbra@mojetech.cz
+                        +420 604 375 959
+                    </h3>
+                    <h3>
+                        vithr@mojetech.cz
+                        +420 605 564 873
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="bg2"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

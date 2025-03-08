@@ -1,0 +1,24 @@
+{
+  "name": "scrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/dbparser2.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.13.8",
+    "@types/pg": "^8.11.11",
+    "@types/xml2js": "^0.4.14",
+    "axios": "^1.8.1",
+    "cheerio": "^1.0.0",
+    "pg": "^8.13.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "xml2js": "^0.6.2"
+  }
+}

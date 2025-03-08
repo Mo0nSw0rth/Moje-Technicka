@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Technická</title>
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+</head>
+<body>
+    <section class="navbar">
+        <a href="/index.html"><img src="/imgs/logo.png" alt="Logo" class="logo"></a>
+        <nav class="buttons">
+            <a href="/dashboard/index.html" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-house-user" style="color: #ffffff;"></i>
+                </span>
+                <div>Dashboard</div>
+            </a>
+            <a href="/map/index.html" class="navButton">
+                <span class="navBluePart">
+                    <i class="fa-solid fa-map-location-dot" style="color: #ffffff;"></i>
+                </span>
+                <div>Mapa</div>
+            </a>
+        </nav>
+    </section>
+    <section class="main">
+        <div class="bg1"></div>
+            <div class="center">
+                <div class="mainSection">
+                    <h1>Informace o vozidlu</h1>
+                    <h2>Poslední technická kontrola</h2>
+                    <div class="mainInfo">
+                        <div class="timeline">
+                        </div>
+                        <div class="infoBox">
+                            <p>Číslo protokolu : <span id="protocol_number"></span></p>
+                            <p>Číslo STK stanice : <a id="station_number"></a></p>
+                            <p>Kraj stanice : <span id="station_region"></span></p>
+                            <p>Číslo odpovědné osoby : <span id="responsible_person"></span></p>
+                            <p>Typ prohlídky : <span id="inspection_type"></span></p>
+                            <p>Rozsah prohlídky : <span id="inspection_scope"></span></p>
+                            <p>VIN : <span id="vehicle_vin"></span></p>
+                            <p>Typ vozidla : <span id="vehicle_type"></span></p>
+                            <p>Kategorie vozidla : <span id="vehicle_category"></span></p>
+                            <p>Značka vozidla : <span id="vehicle_brand"></span></p>
+                            <p>Model vozidla : <span id="vehicle_model"></span></p>
+                            <p>Typ motoru : <span id="engine_type"></span></p>
+                            <p>Technická odpovědná osoba : <span id="technical_responsible_person"></span></p>
+                            <p>Aplikovaná Samolepka : <span id="sticker_applied"></span></p>
+                            <p>Všeobecný výsledek : <span id="overall_result"></span></p>
+                            <p>Další kontrola : <span id="next_inspection_date"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyrights">Všechny použité obrázky a data jsou ve volném užití, nejsou chráněny autorskými právy nebo jsou použity v souladu s jejich licencí.</div>
+            </div>
+        <div class="bg2"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
